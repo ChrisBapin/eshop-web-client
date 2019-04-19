@@ -7,7 +7,9 @@ class Home extends React.Component {
     categories: [],
   };
   async componentDidMount() {
-    const response = await axios.get("http://localhost:8080/get-category");
+    const response = await axios.get(
+      "https://eshop-alex.herokuapp.com/get-category"
+    );
     console.log(response.data);
     this.setState({
       categories: response.data,
